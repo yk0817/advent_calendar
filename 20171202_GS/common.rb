@@ -5,8 +5,10 @@ require 'open-uri'
 require 'pp'
 require 'magic_cloud'
 require 'RMagick'
-# include Magicks
-
+require './crawl/crawl'
+require './visual/scraped_parse'
+require './visual/show_word_cloud'
+require 'RMagick'
 
 
 ActiveRecord::Base.establish_connection(
@@ -23,15 +25,3 @@ Time.zone_default =  Time.find_zone! 'Tokyo'
 ActiveRecord::Base.default_timezone = :local
 
 class G < ActiveRecord::Base; end
-
-# words = [
-#   ['test', 50],
-#   ['me', 40],
-#   ['tenderly', 30],
-# ]
-#
-# cloud = MagicCloud::Cloud.new(words, rotate: :free, scale: :log).draw(960, 960)
-# cloud.write('test.png')
-#
-
-
