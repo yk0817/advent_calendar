@@ -8,8 +8,6 @@ require 'RMagick'
 require './crawl/crawl'
 require './visual/scraped_parse'
 require './visual/show_word_cloud'
-require 'RMagick'
-
 
 ActiveRecord::Base.establish_connection(
         :adapter  => 'mysql2',
